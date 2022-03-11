@@ -2,7 +2,7 @@
 </script>
 
 <template lang="pug">
-h1(class="text-8xl font-900 flex justify-center my-20") Cv Online
+h1(class="text-6xl font-900 flex justify-center my-10") Cv Online
 </template>
 
 <style lang="scss" scoped>
