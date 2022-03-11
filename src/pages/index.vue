@@ -1,25 +1,63 @@
 <script setup lang="ts">
-import html2canvas from 'html2canvas'
-import jsPDF from 'jspdf'
+// import html2canvas from 'html2canvas'
+// import jsPDF from 'jspdf'
+
+// const downloadPdf = () => {
+//   // window.scrollTo({ top: 0 });
+//   const htmlElement = document.getElementById('cv-online-id')
+//   const main = document.getElementById('cv-online-id')
+//   const width: number = htmlElement?.offsetWidth || 0
+//   const height: number = htmlElement?.offsetHeight || 0
+//   html2canvas(htmlElement!, {
+//     height: htmlElement?.offsetHeight,
+//     width: htmlElement?.offsetWidth,
+//     useCORS: true,
+//     allowTaint: true,
+//   }).then((canvas) => {
+//     document.body.appendChild(canvas)
+//     // eslint-disable-next-line new-cap
+//     const doc = new jsPDF()
+//     doc.addImage(canvas, 'image/png', 0, 0, 210, 297) // 单位是毫米 (Unity is mm)
+//     doc.save('curriculo.pdf')
+//   })
+// }
+
+import { Printd } from 'printd'
+
+// const dumpCSSText = (element) => {
+//   let s = ''
+//   const o = getComputedStyle(element)
+//   for (let i = 0; i < o.length; i++)
+//     s += `${o[i]}:${o.getPropertyValue(o[i])};`
+
+//   return s
+// }
+
+// const cssText = `
+//   h1 {
+//     color: black;
+//     font-family: sans-serif;
+//   }
+// `
+
+let css_data = ''
+
+const getCSS = () => {
+  const element = document.getElementById('cv-online-id')
+  const css_obj = getComputedStyle(element)
+
+  for (let i = 0; i < css_obj.length; i++) {
+    css_data += `${css_obj[i]}:${
+      css_obj.getPropertyValue(css_obj[i])
+    };<br>`
+  }
+}
+
+const d = new Printd()
 
 const downloadPdf = () => {
-  // window.scrollTo({ top: 0 });
-  const htmlElement = document.getElementById('cv-online-id')
-  const main = document.getElementById('cv-online-id')
-  const width: number = htmlElement?.offsetWidth || 0
-  const height: number = htmlElement?.offsetHeight || 0
-  html2canvas(htmlElement!, {
-    height: htmlElement?.offsetHeight,
-    width: htmlElement?.offsetWidth,
-    useCORS: true,
-    allowTaint: true,
-  }).then((canvas) => {
-    // document.body.appendChild(canvas)
-    // eslint-disable-next-line new-cap
-    const doc = new jsPDF()
-    doc.addImage(canvas, 'image/png', 0, 0, 210, 297) // 单位是毫米 (Unity is mm)
-    doc.save('curriculo.pdf')
-  })
+  getCSS()
+  d.print(document.getElementById('cv-online-id'), [css_data])
 }
 
 </script>

@@ -24,6 +24,7 @@ specifiers:
   eslint: ^8.10.0
   eslint-plugin-cypress: ^2.12.1
   html2canvas: ^1.4.1
+  html2pdf.js: ^0.10.1
   https-localhost: ^4.7.1
   jspdf: ^2.5.1
   markdown-it-link-attributes: ^4.0.0
@@ -31,6 +32,7 @@ specifiers:
   nprogress: ^0.2.0
   pinia: ^2.0.11
   pnpm: ^6.32.3
+  printd: ^1.5.1
   prism-theme-vars: ^0.2.2
   sass: ^1.49.9
   typescript: ^4.6.2
@@ -57,9 +59,11 @@ dependencies:
   '@vueuse/core': 7.7.1_vue@3.2.31
   '@vueuse/head': 0.7.5_vue@3.2.31
   html2canvas: 1.4.1
+  html2pdf.js: 0.10.1
   jspdf: 2.5.1
   nprogress: 0.2.0
   pinia: 2.0.11_typescript@4.6.2+vue@3.2.31
+  printd: 1.5.1
   prism-theme-vars: 0.2.2
   sass: 1.49.9
   vue: 3.2.31
@@ -3552,6 +3556,10 @@ packages:
       is-symbol: 1.0.4
     dev: true
 
+  /es6-promise/4.2.8:
+    resolution: {integrity: sha512-HJDGx5daxeIvxdBxvG2cb9g4tEvwIk3i8+nhX0yGrYmZUzbkdg8QbDevheDB8gd0//uPj4c1EQua8Q+MViT0/w==}
+    dev: false
+
   /esbuild-android-arm64/0.14.21:
     resolution: {integrity: sha512-Bqgld1TY0wZv8TqiQmVxQFgYzz8ZmyzT7clXBDZFkOOdRybzsnj8AZuK1pwcLVA7Ya6XncHgJqIao7NFd3s0RQ==}
     engines: {node: '>=12'}
@@ -4673,6 +4681,14 @@ packages:
     dependencies:
       css-line-break: 2.1.0
       text-segmentation: 1.0.3
+    dev: false
+
+  /html2pdf.js/0.10.1:
+    resolution: {integrity: sha512-3onwwhOWsZfNjIZwV6YIJ6FVhXk+X9YxHSqzeS6hup+1dGi2DHI+zZYUJ+iFnvtaYcjlhyrILL1fvRCUOa8Fcg==}
+    dependencies:
+      es6-promise: 4.2.8
+      html2canvas: 1.4.1
+      jspdf: 2.5.1
     dev: false
 
   /html5parser/2.0.2:
@@ -6052,6 +6068,11 @@ packages:
     resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
     engines: {node: '>=6'}
     dev: true
+
+  /printd/1.5.1:
+    resolution: {integrity: sha512-+H/webiktgTTGiICDi/IsaYKyOxEtNDe6qi1izHoTaL0ntx+zYsW8fyqVEBkUEztuwXcz+8VGN9cbZpt3qT72g==}
+    engines: {node: '>= 4'}
+    dev: false
 
   /prism-theme-vars/0.2.2:
     resolution: {integrity: sha512-EL9ifuU/F8tEldoCa2sspiiLWysCL54xDbf2gN/ubwdtbuJROqOGopG5kSwunapwaioT+jLUQ/Ky+7jnv62xJA==}
