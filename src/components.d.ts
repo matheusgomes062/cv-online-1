@@ -4,7 +4,13 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    Awards: typeof import('./components/Awards.vue')['default']
+    Cv: typeof import('./components/Cv.vue')['default']
+    Experience: typeof import('./components/Experience.vue')['default']
+    Projects: typeof import('./components/Projects.vue')['default']
+    Skills: typeof import('./components/Skills.vue')['default']
     StatsAndButtons: typeof import('./components/StatsAndButtons.vue')['default']
+    Summary: typeof import('./components/Summary.vue')['default']
     Title: typeof import('./components/Title.vue')['default']
   }
 }

@@ -1,5 +1,7 @@
 <script setup lang="ts">
+
 const status = [{ value: 100 }, { value: 100 }, { value: 100 }, { value: 100 }]
+
 </script>
 
 <template lang="pug">
@@ -18,12 +20,7 @@ div(class="flex flex-col")
       div(class="w-80px h-80px rounded-full bg-neutral-50 flex items-center justify-center")
         p(class="font-extrabold text-3xl") {{ status[3].value }}
 
-  div(class="flex justify-end mb-20")
-    button(class="w-40 flex justify-center text-white bg-blue-500 shadow-xl shadow-blue-500/50 rounded-lg py-2 text-center text-3xl hover:translate-y-2px" type='button')
+  div(class="flex justify-end mb-5")
+    button(class="w-40 flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg py-2 text-center text-3xl hover:translate-y-2px" type='button' @click="$emit('downloadPdf')")
       div(class="i-ic:baseline-cloud-download")
 </template>
-
-<route lang="yaml">
-meta:
-  layout: home
-</route>

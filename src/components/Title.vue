@@ -5,11 +5,6 @@
 h1(class="text-8xl font-900 flex justify-center my-20") Cv Online
 </template>
 
-<route lang="yaml">
-meta:
-  layout: home
-</route>
-
 <style lang="scss" scoped>
 h1 {
 background-image: linear-gradient(
