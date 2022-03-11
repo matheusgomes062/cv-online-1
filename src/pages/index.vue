@@ -1,6 +1,8 @@
 <script setup lang="ts">
 // import html2canvas from 'html2canvas'
 // import jsPDF from 'jspdf'
+import { Printd } from 'printd'
+import cssUsed from '../helpers/cssUsed'
 
 // const downloadPdf = () => {
 //   // window.scrollTo({ top: 0 });
@@ -22,8 +24,6 @@
 //   })
 // }
 
-import { Printd } from 'printd'
-
 // const dumpCSSText = (element) => {
 //   let s = ''
 //   const o = getComputedStyle(element)
@@ -33,30 +33,25 @@ import { Printd } from 'printd'
 //   return s
 // }
 
-// const cssText = `
-//   h1 {
-//     color: black;
-//     font-family: sans-serif;
+const css_data = cssUsed
+
+// const getCSS = () => {
+//   const element = document.getElementById('cv-online-id')
+//   const css_obj = getComputedStyle(element)
+
+//   for (let i = 0; i < css_obj.length; i++) {
+//     css_data += `${css_obj[i]}:${
+//       css_obj.getPropertyValue(css_obj[i])
+//     };`
 //   }
-// `
-
-let css_data = ''
-
-const getCSS = () => {
-  const element = document.getElementById('cv-online-id')
-  const css_obj = getComputedStyle(element)
-
-  for (let i = 0; i < css_obj.length; i++) {
-    css_data += `${css_obj[i]}:${
-      css_obj.getPropertyValue(css_obj[i])
-    };<br>`
-  }
-}
+//   // eslint-disable-next-line no-console
+//   console.log(css_data)
+// }
 
 const d = new Printd()
 
 const downloadPdf = () => {
-  getCSS()
+  // getCSS()
   d.print(document.getElementById('cv-online-id'), [css_data])
 }
 
