@@ -19,5 +19,6 @@ background-image: linear-gradient(
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+
 }
 </style>

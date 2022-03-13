@@ -3,10 +3,32 @@ const summary = 'Desenvolvedor Full Stack com 4 anos de experiência em Vue 2 e 
 </script>
 
 <template lang="pug">
-div(class="flex flex-col justify-center pt-2 pb-3 divide-y divide-gray-500")
-  h1(class="text-xl font-bold text-start") Sumário
-  p(class="text-sm text-start pt-3") {{ summary }}
+div(class="divide-y divide-gray-500 cv__summary")
+  h1(class="cv__summary-title") Sumário
+  //- p(class="cv__summary-description") {{ summary }}
+  textarea(class="cv__summary-description" rows="4" :placeholder="summary")
 </template>
 
 <style lang="scss" scoped>
+.cv__summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0.5rem;
+  padding-bottom: 0.75rem;
+}
+
+.cv__summary-title {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  font-weight: bold;
+  text-align: start;
+}
+
+.cv__summary-description {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-align: start;
+  padding-top: 0.25rem;
+}
 </style>
