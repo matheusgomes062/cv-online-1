@@ -31,7 +31,7 @@ div(class="flex flex-col")
   div(class="flex justify-between my-5")
     div(class="w-auto flex flex-col")
       //- p(class="text-md") Solicite a revisão de um especialista
-      button(class="py-2 w-40 items-center flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-md text-center text-2xl hover:translate-y--2px duration-150 tooltip tooltip-revisao" type='button' data-text="Solicite a revisão de um especialista")
+      button(class="py-2 w-40 h-50px items-center flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-md text-center text-2xl hover:translate-y--2px duration-150 tooltip tooltip-revisao" type='button' data-text="Solicite a revisão de um especialista")
         div(class="i-fluent:ribbon-star-24-filled")
     div(class="text-center")
       //- p(class="text-md") Baixar
@@ -100,7 +100,7 @@ div(class="flex flex-col")
 .tooltip-revisao:before {
   width:180px;
   /* move to top */
-  top:-90%;
+  top:-80%;
   right:-5%; /* and add a small left margin */
 }
 </style>
