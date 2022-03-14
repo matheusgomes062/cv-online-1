@@ -5,7 +5,8 @@ const skills = 'Modern JS Frameworks (Vue2, Vue3, React, React Native), Web Desi
 <template lang="pug">
 div(class="divide-y divide-gray-500 cv__skills")
   h1(class="cv__skills-title") Skills
-  textarea(class="cv__skills-skill" :placeholder="skills" :rows="skills.length/95")
+  div
+    textarea(class="cv__skills-skill" :placeholder="skills" :rows="skills.length/95")
 </template>
 
 <style lang="scss" scoped>

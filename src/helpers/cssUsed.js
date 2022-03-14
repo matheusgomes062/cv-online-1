@@ -171,6 +171,7 @@ const cssUsed = `
     line-height:14px;
     text-align:start;
     padding-top:4px;
+    width: 100%;
 }
 /*! CSS Used from: Embedded */
  .cv__header[data-v-a0c3ade0]{

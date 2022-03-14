@@ -64,6 +64,9 @@ div(class="divide-y divide-gray-500 cv__experience")
   &:nth-of-type(2n) {
     min-width: 70px;
   }
+  &:nth-of-type(3n) {
+    min-width: 130px;
+  }
 }
 
 .cv__experience-description {

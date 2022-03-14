@@ -6,7 +6,8 @@ const summary = 'Desenvolvedor Full Stack com 4 anos de experiência em Vue 2 e 
 div(class="divide-y divide-gray-500 cv__summary")
   h1(class="cv__summary-title") Sumário
   //- p(class="cv__summary-description") {{ summary }}
-  textarea(class="cv__summary-description" rows="4" :placeholder="summary")
+  div
+    textarea(class="cv__summary-description" :placeholder="summary" :rows="summary.length/100")
 </template>
 
 <style lang="scss" scoped>
@@ -30,5 +31,6 @@ div(class="divide-y divide-gray-500 cv__summary")
   line-height: 1.25rem;
   text-align: start;
   padding-top: 0.25rem;
+  width: 100%;
 }
 </style>
