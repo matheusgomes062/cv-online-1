@@ -19,6 +19,7 @@ const downloadPdf = () => {
 
 <template lang="pug">
 div(class="min-w-screen-lg max-w-screen-lg mx-auto pb-20")
+  Navbar
   Title
   StatsAndButtons(@downloadPdf="downloadPdf")
   Cv

@@ -30,6 +30,31 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: var(--clr-bg);
+}
+
+/* html.dark {
+  background-color: #240046;
+} */
+
+.dark {
+  --clr-bg: var(--clr-black-1);
+  --clr-bg-alt: var(--clr-purple-1);
+  --clr-bg-skeleton: var(--clr-gray-1);
+  --clr-primary: var(--clr-white-1);
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-shadow-glow: var(--clr-purple-2);
+}
+
+html {
+  --clr-bg: var(--clr-white-1);
+  --clr-bg-alt: var(--clr-white-2);
+  --clr-bg-skeleton: var(--clr-gray-1);
+  --clr-primary: black;
+  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  --clr-shadow-glow: var(--clr-gray-1);
 }
 
 #nprogress {
@@ -45,26 +70,6 @@ body,
   left: 0;
   width: 100%;
   height: 2px;
-}
-
-
-.light {
-  --clr-bg: var(--clr-white-1);
-  --clr-bg-alt: var(--clr-white-2);
-  --clr-bg-skeleton: var(--clr-gray-1);
-  --clr-primary: black;
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
-}
-
-
-.dark {
-  --clr-bg: var(--clr-black-1);
-  --clr-bg-alt: var(--clr-black-2);
-  --clr-bg-skeleton: var(--clr-gray-1);
-  --clr-primary: var(--clr-white-1);
-  --shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
-    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 input, textarea, span {

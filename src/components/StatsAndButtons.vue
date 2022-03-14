@@ -28,7 +28,11 @@ div(class="flex flex-col")
         div(class="w-50px h-50px rounded-full bg-neutral-50 flex items-center justify-center")
           p(class="font-extrabold text-xl color-gray-400") {{ status[3].value }}
 
-  div(class="flex justify-end mb-5")
-    button(class="w-40 flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg py-2 text-center text-3xl hover:translate-y--2px duration-150" type='button' @click="$emit('downloadPdf')")
+  div(class="flex justify-between my-5")
+    div(class="w-auto flex flex-col")
+      //- p Solicite a revisão de um especialista
+      button(class="py-2 w-20 items-center flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-md text-center text-2xl hover:translate-y--2px duration-150" type='button')
+        div(class="i-mdi:account-search")
+    button(class="w-40 flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg py-2 text-center text-2xl hover:translate-y--2px duration-150" type='button' @click="$emit('downloadPdf')")
       div(class="i-ic:baseline-cloud-download")
 </template>

@@ -19,10 +19,8 @@ onUnmounted(() => {
 <template lang="pug">
 <!-- Aria skip link -->
 a(href='#main' class="skipLink" ref='skipLink') Pular para o conteúdo principal
-Header
 main(@scroll.passive="onScroll" id="main" role="main")
   router-view
-Footer
 </template>
 
 <style>
