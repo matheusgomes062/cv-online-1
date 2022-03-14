@@ -8,7 +8,6 @@ declare module 'vue' {
     Cv: typeof import('./components/Cv.vue')['default']
     CvHeader: typeof import('./components/CvHeader.vue')['default']
     Experience: typeof import('./components/Experience.vue')['default']
-    Header: typeof import('./components/Navbar.vue')['default']
     Navbar: typeof import('./components/Navbar.vue')['default']
     Projects: typeof import('./components/Projects.vue')['default']
     Skills: typeof import('./components/Skills.vue')['default']

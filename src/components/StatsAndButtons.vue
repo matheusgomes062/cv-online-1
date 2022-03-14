@@ -30,9 +30,77 @@ div(class="flex flex-col")
 
   div(class="flex justify-between my-5")
     div(class="w-auto flex flex-col")
-      //- p Solicite a revisão de um especialista
-      button(class="py-2 w-20 items-center flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-md text-center text-2xl hover:translate-y--2px duration-150" type='button')
-        div(class="i-mdi:account-search")
-    button(class="w-40 flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg py-2 text-center text-2xl hover:translate-y--2px duration-150" type='button' @click="$emit('downloadPdf')")
-      div(class="i-ic:baseline-cloud-download")
+      //- p(class="text-md") Solicite a revisão de um especialista
+      button(class="py-2 w-40 items-center flex justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-md text-center text-2xl hover:translate-y--2px duration-150 tooltip tooltip-revisao" type='button' data-text="Solicite a revisão de um especialista")
+        div(class="i-fluent:ribbon-star-24-filled")
+    div(class="text-center")
+      //- p(class="text-md") Baixar
+      button(class="w-40 h-50px flex self-end justify-center text-white bg-blue-500 shadow-lg shadow-blue-500/50 rounded-lg py-2 text-center text-2xl hover:translate-y--2px duration-150 tooltip" type='button' @click="$emit('downloadPdf')" data-text="Baixar")
+        div(class="i-ic:baseline-cloud-download")
 </template>
+
+<style lang="scss" scoped>
+.tooltip {
+  position:relative; /* making the .tooltip span a container for the tooltip text */
+}
+
+.tooltip:before {
+  content: attr(data-text); /* here's the magic */
+  position:absolute;
+
+  /* vertically center */
+  // top:50%;
+  transform:translateY(-50%);
+
+  /* move to top */
+  top:-60%;
+  right:25%; /* and add a small left margin */
+
+  /* basic styles */
+  width:80px;
+  padding:10px 5px;
+  border-radius:5px;
+  background:var(--clr-bg-alt);
+  color: var(--clr-primary);
+  text-align:center;
+  font-size: 16px;
+  line-height: 18px;
+
+  // display:none; /* hide by default */
+
+  opacity:0;
+  transition:.2s opacity;
+
+}
+.tooltip:after {
+  content: "";
+  position:absolute;
+
+  /* position tooltip correctly */
+  // top:100%;
+  // right:25%; /* and add a small left margin */
+
+  /* vertically center */
+  top:-9%;
+  transform:translateY(-50%);
+
+  /* the arrow */
+  border:10px solid var(--clr-bg-alt);
+  border-color: var(--clr-bg-alt) transparent transparent transparent;
+
+  // display:none;
+  opacity:0;
+  transition:.2s opacity;
+}
+.tooltip:hover:before, .tooltip:hover:after {
+  // display:block;
+  opacity:1;
+}
+
+.tooltip-revisao:before {
+  width:180px;
+  /* move to top */
+  top:-90%;
+  right:-5%; /* and add a small left margin */
+}
+</style>
