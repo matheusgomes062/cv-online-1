@@ -372,7 +372,5 @@ textarea {
 
   resize: none; /*remove the resize handle on the bottom right*/
 }
-
 `
-
 export default cssUsed
