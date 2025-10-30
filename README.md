@@ -7,4 +7,5 @@ Display de 12 colunas
 Sem o grid aparente
 ![image](https://user-images.githubusercontent.com/47605309/157105326-4597bcf7-5509-4148-b62d-800688ebfc0f.png)
 
-![Uploading cv-online-1.png…]()
+
+<img width="1260" height="1306" alt="cv-online-1" src="https://github.com/user-attachments/assets/e5a0e430-4cde-4991-b248-6655671585e9" />
