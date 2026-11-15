@@ -1,0 +1,18 @@
+minimumReleaseAgeExcludePrune: true
+
+trustPolicy: no-downgrade
+# workbox-build 7.4.1 (pulled in by vite-plugin-pwa) depends on this exact
+# pre-release, which newer pnpm versions flag because it was published
+# without provenance while other releases of the package have it
+trustPolicyExclude:
+  - '@trickfilm400/rollup-plugin-off-main-thread@3.0.0-pre1'
+
+shellEmulator: true
+
+packages:
+  - .
+
+# pnpm 11+ only runs dependency install scripts that are listed here
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true

@@ -1,5 +1,11 @@
 <script setup lang="ts">
-const contactInfo = [{ icon: 'https://img.icons8.com/material/24/000000/marker--v1.png', value: 'São José dos Campos, São Paulo' }, { icon: 'https://img.icons8.com/material/24/000000/mail.png', value: 'matheusgomes062@gmail.com ' }, { icon: 'https://img.icons8.com/material/24/000000/android--v1.png', value: '+55(12)93618-0331' }, { icon: 'https://img.icons8.com/material/24/000000/linkedin--v1.png', value: '/in/matheus-gomes-dev' }, { icon: 'https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-web-web-hosting-kmg-design-detailed-outline-kmg-design.png', value: 'https://mgdev.vercel.app/' }]
+const contactInfo = [
+  { icon: 'https://img.icons8.com/material/24/000000/marker--v1.png', value: 'São José dos Campos, São Paulo' },
+  { icon: 'https://img.icons8.com/material/24/000000/mail.png', value: 'matheusgomes062@gmail.com ' },
+  { icon: 'https://img.icons8.com/material/24/000000/android--v1.png', value: '+55(12)93618-0331' },
+  { icon: 'https://img.icons8.com/material/24/000000/linkedin--v1.png', value: '/in/matheus-gomes-dev' },
+  { icon: 'https://img.icons8.com/external-kmg-design-detailed-outline-kmg-design/64/000000/external-web-web-hosting-kmg-design-detailed-outline-kmg-design.png', value: 'https://mgdev.vercel.app/' },
+]
 
 const header = { name: 'Matheus Gomes de Paula', contactInfo }
 </script>

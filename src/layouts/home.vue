@@ -3,8 +3,10 @@ import { onMounted, onUnmounted } from 'vue'
 import { useSiteStore } from '~/stores/site'
 
 const siteStore = useSiteStore()
-const onScroll = () => {
-  window.pageYOffset > 500 ? siteStore.setScrollToTop(true) : siteStore.setScrollToTop(false)
+function onScroll() {
+  window.pageYOffset > 500
+    ? siteStore.setScrollToTop(true)
+    : siteStore.setScrollToTop(false)
 }
 
 onMounted(() => {

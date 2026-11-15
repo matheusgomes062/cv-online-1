@@ -1,11 +1,12 @@
-import { ViteSSG } from 'vite-ssg'
-import generatedRoutes from 'virtual:generated-pages'
+import type { UserModule } from './types'
 import { setupLayouts } from 'virtual:generated-layouts'
+import generatedRoutes from 'virtual:generated-pages'
+import { ViteSSG } from 'vite-ssg'
 import App from './App.vue'
 
 import '@unocss/reset/tailwind.css'
 import './styles/main.css'
-import 'uno.css'
+import 'virtual:uno.css'
 
 const routes = setupLayouts(generatedRoutes)
 
@@ -15,6 +16,6 @@ export const createApp = ViteSSG(
   { routes, base: import.meta.env.BASE_URL },
   (ctx) => {
     // install all modules under `modules/`
-    Object.values(import.meta.globEager('./modules/*.ts')).forEach(i => i.install?.(ctx))
+    Object.values(import.meta.glob<{ install?: UserModule }>('./modules/*.ts', { eager: true })).forEach(i => i.install?.(ctx))
   },
 )
