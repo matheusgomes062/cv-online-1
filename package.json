@@ -1,9 +1,9 @@
 {
   "type": "module",
+  "private": true,
   "engines": {
     "node": "22.x"
   },
-  "private": true,
   "scripts": {
     "build": "vite-ssg build",
     "dev": "vite --port 3333 --open",
