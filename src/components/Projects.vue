@@ -1,5 +1,18 @@
 <script setup lang="ts">
-const projects = [{ role: 'Escritor', company: 'PWR Pixel - Livro', date: 'Julho 2021 - Novembro 2021', description: '• Escrevi o primeiro livro brasileiro com tudo sobre Markdown. Disponibilizei ele de graça para todos! Você pode conferir pelo link disponibilizado no meu Linkedin' }, { role: 'Redator', company: 'dev.to e Medium', date: 'Novembro 20219 - Presente', description: '• Escrevi tutoriais sobre tecnologias emergentes em inglês e português que já impactaram mais de 45 mil pessoas. Escrevi também noticias de tecnologia sobre criptomoedas e blockchain para o site bitnoticias' }]
+const projects = [
+  {
+    role: 'Escritor',
+    company: 'PWR Pixel - Livro',
+    date: 'Julho 2021 - Novembro 2021',
+    description: '• Escrevi o primeiro livro brasileiro com tudo sobre Markdown. Disponibilizei ele de graça para todos! Você pode conferir pelo link disponibilizado no meu Linkedin',
+  },
+  {
+    role: 'Redator',
+    company: 'dev.to e Medium',
+    date: 'Novembro 20219 - Presente',
+    description: '• Escrevi tutoriais sobre tecnologias emergentes em inglês e português que já impactaram mais de 45 mil pessoas. Escrevi também noticias de tecnologia sobre criptomoedas e blockchain para o site bitnoticias',
+  },
+]
 </script>
 
 <template lang="pug">
@@ -66,5 +79,4 @@ div(class="divide-y divide-gray-500 cv__projects")
   white-space: pre-line;
   width: 100%;
 }
-
 </style>

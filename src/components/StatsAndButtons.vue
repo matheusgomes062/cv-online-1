@@ -1,7 +1,10 @@
 <script setup lang="ts">
-
-const status = [{ title: 'Gramática', value: 100 }, { title: 'Verbos', value: 100 }, { title: 'Tópicos', value: 100 }, { title: 'Campos', value: 100 }]
-
+const status = [
+  { title: 'Gramática', value: 100 },
+  { title: 'Verbos', value: 100 },
+  { title: 'Tópicos', value: 100 },
+  { title: 'Campos', value: 100 },
+]
 </script>
 
 <template lang="pug">

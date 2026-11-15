@@ -1,5 +1,12 @@
 <script setup lang="ts">
-const projects = [{ award: 'Hackathon Call For Code', company: 'IBM', date: '2020', description: '• Conquistou o 4º lugar na América Latina, o 2º lugar no Brasil, no hackathon IBM - Call for Code desenvolvendo um aplicativo para solucionar o problema do COVID-19 no mundo. O aplicativo notifica os usuários potencialmente expostos ao COVID-19 de forma anônima, segura e de uma forma que respeita a privacidade do indivíduo.' }]
+const projects = [
+  {
+    award: 'Hackathon Call For Code',
+    company: 'IBM',
+    date: '2020',
+    description: '• Conquistou o 4º lugar na América Latina, o 2º lugar no Brasil, no hackathon IBM - Call for Code desenvolvendo um aplicativo para solucionar o problema do COVID-19 no mundo. O aplicativo notifica os usuários potencialmente expostos ao COVID-19 de forma anônima, segura e de uma forma que respeita a privacidade do indivíduo.',
+  },
+]
 </script>
 
 <template lang="pug">
